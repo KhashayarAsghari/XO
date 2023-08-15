@@ -1,0 +1,44 @@
+.xmarked > .o{
+    display: none !important;
+}
+.xmarked > .x{
+    display: block !important;
+}
+
+.omarked > .o {
+    display: block !important;
+}
+.omarked > .x {
+    display: none !important;
+}
+
+.o,.x {
+    display: block;
+}
+
+.box {
+    width: 195px;
+    height: 195px;
+    background-color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    flex-wrap: wrap;
+}
+
+.box > .x , .box > .o {
+    display: none;
+}
+
+.checked {
+    pointer-events: none;
+}
+
