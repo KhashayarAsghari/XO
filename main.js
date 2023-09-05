@@ -97,4 +97,5 @@ function checkEqual(){
 
 for (const box of boxes) {
     box.addEventListener("click", markBox);
+   
 }

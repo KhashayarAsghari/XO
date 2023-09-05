@@ -1,20 +1,88 @@
 .container {
-    max-height: 90vh;
+    height: 90vh;
+    aspect-ratio: 1/1;
     display: inline-block;
     position: relative;
 
     &__frame {
-        max-height: 90vh;
+        height: 90vh;
+        aspect-ratio: 1/1;
         position: absolute;
         top: 0;
         left: 0;
     }
 
-    & #1{
+    .box {
+        
         position: absolute;
-        top: 0;
+        aspect-ratio: 1/1;
+    }
+
+    & #one{
+        height: 25vh;
+        top: 8%;
         left: 0;
         background-color: red;
+    }
+
+    & #two {
+        height: 28vh;
+        top: 3%;
+        left: 30%;
+        background-color: blue;
+    }
+
+    & #three {
+        height: 28vh;
+        top: 3%;
+        left: 65%;
+        background-color: yellow;
+    }
+
+    & #four {
+        height: 22vh;
+        top: 37%;
+        left: 1%;
+        background-color: yellow;
+    }
+
+    & #five {
+        height: 23vh;
+        top: 35%;
+        left: 29%;
+        aspect-ratio: 6/5;
+        background-color: gray;
+    }
+
+    & #six {
+        height: 24vh;
+        top: 35%;
+        left: 63%;
+        aspect-ratio: 5/4;
+        background-color: red;
+    }
+
+    & #seven {
+        height: 24vh;
+        top: 63%;
+        left: 0;
+        background-color: blue;
+    }
+
+    & #eight {
+        height: 24vh;
+        top: 63%;
+        left: 29%;
+        aspect-ratio: 6/5;
+        background-color: pink;
+    }
+
+    & #nine {
+        height: 24vh;
+        top: 63%;
+        left: 65%;
+        aspect-ratio: 6/5;
+        background-color: green;
     }
 
 }
