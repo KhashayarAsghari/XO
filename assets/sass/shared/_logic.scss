@@ -1,0 +1,9 @@
+// logical classes that may add on runtime
+
+.checked {
+    pointer-events: none;
+
+    &:hover {
+        background-color: rgba(200,0,0,0.7) !important;
+    }
+}

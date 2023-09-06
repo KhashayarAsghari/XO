@@ -3,28 +3,67 @@ let xTurn           = true;
 xTurn               = Math.floor(Math.random()*2);
 let checkedX        = [];
 let checkedO        = [];
-let box1            = document.getElementById("one");
-let box2            = document.getElementById("two");
-let box3            = document.getElementById("three");
-let box4            = document.getElementById("four");
-let box5            = document.getElementById("five");
-let box6            = document.getElementById("six");
-let box7            = document.getElementById("seven");
-let box8            = document.getElementById("eight");
-let box9            = document.getElementById("nine");
+let box1            = document.querySelector(".one");
+let box2            = document.querySelector(".two");
+let box3            = document.querySelector(".three");
+let box4            = document.querySelector(".four");
+let box5            = document.querySelector(".five");
+let box6            = document.querySelector(".six");
+let box7            = document.querySelector(".seven");
+let box8            = document.querySelector(".eight");
+let box9            = document.querySelector(".nine");
 let checkedCount    = 0;
 
 const gameOver      = [[1,2,3],[4,5,6],[7,8,9],[1,5,9],[3,5,7],[1,4,7],[2,5,8],[3,6,9]];
 
 
+
+
+
 // define all win poses in a 2d array and check later
 
 
-function markBox(){
+function markBox(evt){
     
     if(xTurn){
+        
+        let rand = Math.floor(Math.random()*11 + 1);
         this.classList.add("xmarked", "checked");
         checkedX.push(+this.id);
+        let stringId = "";
+        switch(+this.id){
+            case 1 : 
+                stringId = "one"
+                break;
+            case 2 : 
+                stringId = "two"
+                break;
+            case 3 : 
+                stringId = "three"
+                break;
+            case 4 : 
+                stringId = "four"
+                break;
+            case 5 : 
+                stringId = "five"
+                break;
+            case 6 : 
+                stringId = "six"
+                break;
+            case 7 : 
+                stringId = "seven"
+                break;
+            case 8 : 
+                stringId = "eight"
+                break;
+            case 9 : 
+                stringId = "nine"
+                break;
+        }
+        let thisElement = document.querySelector(`.container>.${stringId}`);
+        thisElement.innerHTML = `<img src="./assets/images/X/${rand}.png" alt="">`
+
+
         let xResult = checkWinnerX();
         if(xResult == "xWins"){
             alert("x wins");
@@ -36,9 +75,42 @@ function markBox(){
         
         xTurn = false;
     }else{
+        let rand = Math.floor(Math.random()*11 + 1);
         this.classList.add("omarked", "checked");
         checkedO.push(+this.id);
         let OResult = checkWinnerO();
+        let stringId = "";
+        switch(+this.id){
+            case 1 : 
+                stringId = "one"
+                break;
+            case 2 : 
+                stringId = "two"
+                break;
+            case 3 : 
+                stringId = "three"
+                break;
+            case 4 : 
+                stringId = "four"
+                break;
+            case 5 : 
+                stringId = "five"
+                break;
+            case 6 : 
+                stringId = "six"
+                break;
+            case 7 : 
+                stringId = "seven"
+                break;
+            case 8 : 
+                stringId = "eight"
+                break;
+            case 9 : 
+                stringId = "nine"
+                break;
+        }
+        let thisElement = document.querySelector(`.container>.${stringId}`);
+        thisElement.innerHTML = `<img src="./assets/images/O/${rand}.png" alt="">`
         if(OResult == "oWins"){
             alert("o wins");
             for (const box of boxes) {

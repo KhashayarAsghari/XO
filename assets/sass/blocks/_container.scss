@@ -13,76 +13,76 @@
     }
 
     .box {
+        @include dflex();
         
         position: absolute;
         aspect-ratio: 1/1;
+
+        &:hover {
+            background-color: rgba(0,0,0,0.1);
+        }
+
+        &> img {
+            width: 70%;
+        }
     }
 
-    & #one{
+    & .one{
         height: 25vh;
         top: 8%;
         left: 0;
-        background-color: red;
     }
 
-    & #two {
+    & .two {
         height: 28vh;
         top: 3%;
         left: 30%;
-        background-color: blue;
     }
 
-    & #three {
+    & .three {
         height: 28vh;
         top: 3%;
         left: 65%;
-        background-color: yellow;
     }
 
-    & #four {
+    & .four {
         height: 22vh;
         top: 37%;
         left: 1%;
-        background-color: yellow;
     }
 
-    & #five {
+    & .five {
         height: 23vh;
         top: 35%;
         left: 29%;
         aspect-ratio: 6/5;
-        background-color: gray;
     }
 
-    & #six {
+    & .six {
         height: 24vh;
         top: 35%;
         left: 63%;
         aspect-ratio: 5/4;
-        background-color: red;
     }
 
-    & #seven {
+    & .seven {
         height: 24vh;
         top: 63%;
         left: 0;
-        background-color: blue;
     }
 
-    & #eight {
+    & .eight {
         height: 24vh;
         top: 63%;
         left: 29%;
         aspect-ratio: 6/5;
-        background-color: pink;
     }
 
-    & #nine {
+    & .nine {
         height: 24vh;
         top: 63%;
         left: 65%;
         aspect-ratio: 6/5;
-        background-color: green;
     }
 
 }
