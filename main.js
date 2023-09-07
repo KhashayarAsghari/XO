@@ -1,6 +1,12 @@
 let boxes           = document.querySelectorAll(".box")
+let playerTurn      = document.getElementById("player-turn")
 let xTurn           = true;
 xTurn               = Math.floor(Math.random()*2);
+if(xTurn) {
+    playerTurn.setAttribute("src", "./assets/images/X/1.png")
+}else {
+    playerTurn.setAttribute("src", "./assets/images/O/1.png")
+}
 let checkedX        = [];
 let checkedO        = [];
 let box1            = document.querySelector(".one");
