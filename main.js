@@ -72,6 +72,10 @@ function markBox(evt){
             }
         }
         checkedCount++;
+
+        if(checkedCount == 9 && xResult == undefined) {
+            alert("tie");
+        }
         
         xTurn = false;
     }else{
@@ -118,6 +122,10 @@ function markBox(evt){
             }
         }
         checkedCount++;
+
+        if(checkedCount == 9 && xResult == undefined) {
+            alert("tie");
+        }
         
         xTurn = true;
     }
