@@ -1,11 +1,23 @@
 .score-board {
-    height: 100vh;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
     &__Ximage {
-        width: 200px;
+        height: calc(100% / 4);
+    }
+
+    &__turn {
+        height: calc(100% / 4);
+
+        &__image {
+            height: 100%;
+        }
     }
 
     &__Oimage {
-        width: 200px;
+        height: calc(100% / 4);
     }
 }

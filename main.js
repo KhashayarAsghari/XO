@@ -84,6 +84,7 @@ function markBox(evt){
         }
         
         xTurn = false;
+        playerTurn.setAttribute("src", "./assets/images/O/1.png")
     }else{
         let rand = Math.floor(Math.random()*11 + 1);
         this.classList.add("omarked", "checked");
@@ -134,6 +135,7 @@ function markBox(evt){
         }
         
         xTurn = true;
+        playerTurn.setAttribute("src", "./assets/images/X/1.png")
     }
 }
 
