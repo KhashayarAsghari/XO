@@ -18,6 +18,8 @@ let box6            = document.querySelector(".six");
 let box7            = document.querySelector(".seven");
 let box8            = document.querySelector(".eight");
 let box9            = document.querySelector(".nine");
+let xScore          = document.getElementById("X-score");
+let oScore          = document.getElementById("O-score");
 let checkedCount    = 0;
 
 const gameOver      = [[1,2,3],[4,5,6],[7,8,9],[1,5,9],[3,5,7],[1,4,7],[2,5,8],[3,6,9]];
@@ -74,8 +76,16 @@ function markBox(evt){
         if(xResult == "xWins"){
             alert("x wins");
             for (const box of boxes) {
-                box.classList.add("checked");
+                box.classList.remove("checked");
+                box.classList.remove("omarked");
+                box.classList.remove("xmarked");
+                box.innerHTML = "";
+                checkedX = [];
+                checkedO = [];
             }
+            let temp = +xScore.textContent;
+            temp++;
+            xScore.textContent = temp;
         }
         checkedCount++;
 
@@ -125,12 +135,20 @@ function markBox(evt){
         if(OResult == "oWins"){
             alert("o wins");
             for (const box of boxes) {
-                box.classList.add("checked");
+                box.classList.remove("checked");
+                box.classList.remove("omarked");
+                box.classList.remove("xmarked");
+                box.innerHTML = "";
+                checkedX = [];
+                checkedO = [];
             }
+            let temp = +oScore.textContent;
+            temp++;
+            oScore.textContent = temp;
         }
         checkedCount++;
 
-        if(checkedCount == 9 && xResult == undefined) {
+        if(checkedCount == 9 && OResult == undefined) {
             alert("tie");
         }
         

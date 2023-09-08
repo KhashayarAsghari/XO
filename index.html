@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,51 +8,60 @@
     <link rel="stylesheet" href="./assets/css/main.min.css">
     <script src="main.js" defer></script>
 </head>
+
 <body>
 
     <div class="score-board">
-        <img class="score-board__Ximage" src="./assets/images/X/1.png" alt="">
+        <div class="score-board__item">
+            <img class="score-board__item__Ximage" src="./assets/images/X/1.png" alt="">
+            <h2 id="X-score" class="score-board__item__score">0</h2>
+        </div>
 
         <div class="score-board__turn">
             <img id="player-turn" class="score-board__turn__image" src="" alt="">
+            <h2 class="score-board__turn__title">turn</h2>
         </div>
 
-        <img class="score-board__Oimage" src="./assets/images/O/1.png" alt="">
+        <div class="score-board__item">
+            <img class="score-board__item__Oimage" src="./assets/images/O/1.png" alt="">
+            <h2 id="O-score" class="score-board__item__score">0</h2>
+        </div>
     </div>
 
     <div class="container">
-        
+
 
 
         <img src="./assets/images/frame.png" alt="" class="container__frame">
         <div id="1" class="one box">
-            
+
         </div>
         <div id="2" class="two box">
-            
+
         </div>
         <div id="3" class="three box">
-            
+
         </div>
         <div id="4" class="four box">
-            
+
         </div>
         <div id="5" class="five box">
-            
+
         </div>
         <div id="6" class="six box">
-            
+
         </div>
         <div id="7" class="seven box">
-            
+
         </div>
         <div id="8" class="eight box">
-            
+
         </div>
         <div id="9" class="nine box">
-            
+
         </div>
     </div>
-    
+
 </body>
+
 </html>

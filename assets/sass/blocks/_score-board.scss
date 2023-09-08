@@ -5,19 +5,48 @@
     justify-content: space-between;
     align-items: center;
 
-    &__Ximage {
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         height: calc(100% / 4);
+
+
+        &__Ximage {
+            height: 100%;
+        }
+
+        &__Oimage {
+            height: 100%;
+        }
+
+        &__score {
+            font-size: 5rem;
+            margin-left: 8rem;
+
+            
+        }
+
     }
 
+    
+
     &__turn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         height: calc(100% / 4);
 
         &__image {
             height: 100%;
         }
+
+        &__title {
+            font-size: 5rem;
+            margin-left: 2rem;
+            
+        }
     }
 
-    &__Oimage {
-        height: calc(100% / 4);
-    }
+    
 }
